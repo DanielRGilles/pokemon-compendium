@@ -2,22 +2,26 @@ import React, { Component } from 'react'
 import './App.css';
 import request from 'superagent';
 import PokeList from './components/PokeList';
-
+import Header from './components/Header';
 export default class SearchPage extends Component {
    state = {
        sortOrder: '',
-       query: ''
+       query: '',
+       pokemon: []
    }
     componentDidMount = async () => {
-        const data = await request.get(`https://pokedex-alchemy.herokuapp.com/api/pokedex/5cef3501ef6005a77cd4fd33`)
+        const response = await request.get(`https://pokedex-alchemy.herokuapp.com/api/pokedex?page=3&perPage=50`)
     
-        console.log(data.body);
+        
+        this.setState({pokemon: response.body.results})
     }
     render() {
         return (
-            <>
-              <PokeList Pokedata= {data} />  
-            </>
+            <main className='poke-cnt'>
+              <Header/>
+              
+              <PokeList pokemons= {this.state.pokemon} />  
+            </main>
         )
     }
 }
