@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import './App.css';
-import request from 'superagent';
+import request, { search } from 'superagent';
 import PokeList from './components/PokeList';
 import Header from './components/Header';
-import Dropdown from './components/Dropdown';
+import Sort from './components/Sort';
+import Serch from './components/Search';
 
 export default class SearchPage extends Component {
    state = {
@@ -40,16 +41,10 @@ export default class SearchPage extends Component {
             <main className='poke-cnt'>
               <Header/>
             <section className='search-box'>
-            <form onSubmit={this.handleSubmit}>
-                <input type='text' value={this.state.query} onChange={this.handleChange} />
-                <button>Search</button>
-            </form>
-            <label>Order</label>
-            <Dropdown  handleChange={this.handleOrderChange} options={['desc', 'asc']} />
-            <label>Results per page</label>
-            <Dropdown  handleChange={this.handleQuantityChange} options={[20, 50, 100, 200]} />
+              <Serch handleSubmit={this.handleSubmit} handleChange={this.handleChange} query={this.state.query}/>
+              <Sort handleOrderChange={this.handleOrderChange} sortOrder={this.state.sortOrder} pokePerpage={this.state.pokePerpage} handleQuantityChange={this.handleQuantityChange}/>
             </section>
-            <PokeList isLoading={this.state.isLoading} pokemons= {this.state.pokemon} />  
+              <PokeList isLoading={this.state.isLoading} pokemons= {this.state.pokemon} />  
             </main>
         )
     }
