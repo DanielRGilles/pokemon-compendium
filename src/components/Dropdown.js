@@ -8,8 +8,8 @@ export default class Dropdown extends Component {
 
                 <select onChange={this.props.handleChange}>
                     {
-                        this.props.options.map(optionName => 
-                        <option key={optionName} value= {optionName}> { optionName }
+                        this.props.options.map(({optionName, display }) => 
+                        <option key={optionName} value= {optionName}> { display }
                         </option>)
                     }
                     </select>
