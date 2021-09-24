@@ -6,7 +6,7 @@ export default class PokeList extends Component {
             <>
             <ul className='poke-mon'>
 
-                { this.props.pokemons.length === 0
+                { this.props.isLoading
                 ? <div><img className='load-ing' src='pokeball.png' alt='pokeball'/></div>
                 : this.props.pokemons.map(pokemon => { return(
                 <li className='pokemon' key={pokemon._id}>
