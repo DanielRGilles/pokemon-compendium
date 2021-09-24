@@ -25,7 +25,11 @@ export default class Detail extends Component {
         return (
             <>
             <Header/>
-              <section className={this.state.pokemon.type_1 + ' pokemon'}><DetailPokemon details={this.state.pokemon}/> </section>
+            <main className='detailed'>
+              <section className={this.state.pokemon.type_1 + ' pokemon position-pokemon'}>
+              <DetailPokemon  isLoading={this.state.isLoading} details={this.state.pokemon}/>
+               </section>
+              </main>
             </>
         )
     }

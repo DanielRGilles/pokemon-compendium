@@ -4,10 +4,10 @@ export default class Header extends Component {
     render() {
         return (
             <>
-             <header className='header-class'>
+             <a href='./'><header className='header-class'>
                  PokeDex
                  
-            </header>   
+            </header>   </a>
             </>
         )
     }

@@ -47,7 +47,7 @@ export default class SearchPage extends Component {
   
         
     render() {
-        console.log(this.state.pokemon)
+        
         return (
             <main className='poke-cnt'>
               <Header/>

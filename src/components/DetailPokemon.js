@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-
+import '../App.css'
 export default class DetailPokemon extends Component {
     render() {
         return (
+        
             <>
-            <div className='detailed-pokemon'>
-              <div className='pokemon-neem'>{this.props.details.pokemon} </div>  
-              <img src={this.props.details.url_image} alt={this.props.details.pokemon}/>  
-              <div className='pokemon-deets'>Type:{this.props.details.type_1}</div>
+                { this.props.isLoading
+                ? <img className='load-ing-det' src='../pokeball.png' alt='pokeball'/>
+                : <div className='pokemon-neem'>{this.props.details.pokemon}  
+                <img className='poke-pic'src={this.props.details.url_image} alt={this.props.details.pokemon}/>  
+                <div className='pokemon-deets'>Type:{this.props.details.type_1}</div>
                  <div className='pokemon-deets'>Attack:{this.props.details.attack}</div>
                  <div className='pokemon-deets'>SP. Attack:{this.props.details.special_attack}</div>
                  <div className='pokemon-deets'>Defense:{this.props.details.defense}</div>
@@ -20,8 +22,9 @@ export default class DetailPokemon extends Component {
                  <div className='pokemon-deets'>Second Ability:{this.props.details.ability_2}</div> 
                  <div className='pokemon-deets'>Hidden Ability:{this.props.details.ability_hidden}</div> 
                  <div className='pokemon-deets'>Shape:{this.props.details.shape}</div> 
-            </div>
+                </div>  }
             </>
+            
         )
     }
 }
