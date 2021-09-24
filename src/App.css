@@ -69,6 +69,69 @@ body {
   padding: 15px;
   
 }
+.grass {
+  background-color: lightgreen;
+}
+.fire {
+  background-color: lightsalmon;
+}
+.water {
+  background-color: lightblue;
+}
+.bug {
+  background-color: rgb(247, 247, 37);
+}
+.normal {
+  background-color: lightgrey;
+}
+.steel {
+  background-color: slategray;
+}
+.psychic {
+  background-color: rgb(124, 83, 165);
+}
+.dragon {
+  background-color: rgba(19, 16, 16, 0.705);
+  color: coral;
+}
+.dark {
+  background-color: gold;
+}
+.ground {
+  background-color: brown;
+}
+.ice {
+  background-color: #D6ECEF
+}
+.fighting {
+  background-color: wheat;
+}
+.fairy {
+  background-color: pink;
+}
+.ghost {
+  background-color: lightslategray;
+}
+.flying {
+  background-color: coral;
+}
+.poison {
+  background-color: darkgreen;
+}
+.rock {
+  background-color: rgb(87, 87, 26);
+}
+.electric {
+  background-color: skyblue;
+  font-size: .8rem;
+
+}
+
+
+
+.pokemon > img {
+  justify-content: center;
+}
 .pokemon-deets {
   margin: 1px 5px 1px 5px;
   background-color: white;
@@ -81,9 +144,8 @@ body {
 .poke-pic {
   width: 50%;
   height: 50%;
-  border-radius: 5px;
-  margin-left: 12px;
-  
+  justify-self: center;
+  margin-left: 25%;
 }
 .load-ing {
   position: fixed;
@@ -116,7 +178,7 @@ body {
     overflow: hidden;
   }
   .pokemon-neem {
-    font-size: 75%;
+    font-size: .75rem;
     width: fit-content;
   }
 }

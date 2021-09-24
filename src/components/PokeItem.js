@@ -7,7 +7,7 @@ export default class PokeItem extends Component {
                 { this.props.isLoading
                 ? <div><img className='load-ing' src='pokeball.png' alt='pokeball'/></div>
                 : this.props.pokemons.map(pokemon => { return(
-                <li className='pokemon' key={pokemon._id}>
+                <li className={pokemon.type_1 + ' pokemon'} key={pokemon._id}>
                  <div className='pokemon-neem'>{pokemon.pokemon}</div>  
                  <img className='poke-pic'src={pokemon.url_image} alt={pokemon.pokemon}/>
                  <div className='pokemon-deets'>Type:{pokemon.type_1}</div>
