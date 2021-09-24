@@ -129,7 +129,10 @@ body {
 
 }
 
-
+.home-img {
+  width: 100vw;
+  height: 100vh;
+}
 
 .pokemon > img {
   justify-content: center;
