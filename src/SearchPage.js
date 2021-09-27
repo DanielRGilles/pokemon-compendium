@@ -63,7 +63,7 @@ export default class SearchPage extends Component {
         
         return (
             <main className='poke-cnt'>
-              <a href='./'><Header/></a>
+              <Header/>
             <section className='search-box'>
               <Search handleSubmit={this.handleSubmit} placeholder={`Search by ${this.state.typeQ}`} handleChange={this.handleChange} handleTypeChange={this.handleTypeChange}/>
               <Sort pokemon={this.state.pokemon}handlePreviousPageChange={this.handlePreviousPageChange} handleNextPageChange={this.handleNextPageChange}  handleOrderChange={this.handleOrderChange} sortOrder={this.state.sortOrder} pokePerpage={this.state.pokePerpage} page={this.state.page}handleQuantityChange={this.handleQuantityChange}/>

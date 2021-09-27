@@ -18,12 +18,12 @@ export default class App extends Component {
               <NavLink
               exact
               activeStyle={{fontSize:'1.5rem'}}
-              to='/'>
+              to='/'>Home
               </NavLink>
               <NavLink
               exact
               activeStyle={{fontSize:'1.5rem'}}
-              to='/SearchPage'>
+              to='/SearchPage'>Search
               </NavLink>
             </header>
             <Switch>
