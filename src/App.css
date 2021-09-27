@@ -78,7 +78,7 @@ body {
 }
 
 .position-pokemon {
-  margin-left: 35%;
+  justify-content: center;
 }
 .grass {
   background-color: lightgreen;

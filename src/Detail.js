@@ -3,10 +3,12 @@ import './App.css';
 import request from 'superagent';
 import Header from './components/Header';
 import DetailPokemon from './components/DetailPokemon';
+// import { withRouter } from 'react-router';
+// const searchParams = new URLSearchParams(window.location.search);
+// const pokemonID = searchParams.get('id')
 
-const searchParams = new URLSearchParams(window.location.search);
-const pokemonID = searchParams.get('id')
-console.log(pokemonID + ' pokemonID')
+
+
 export default class Detail extends Component { 
     state = {
         pokemon: [],
@@ -16,9 +18,9 @@ export default class Detail extends Component {
         await this.fetchData();
    } 
     fetchData = async() => {
-        const search = await request.get(`https://pokedex-alchemy.herokuapp.com/api/pokedex/${pokemonID}`)
+        const search = await request.get(`https://pokedex-alchemy.herokuapp.com/api/pokedex/${this.props.match.params._id}`)
         this.setState({ pokemon: search.body, isLoading: false});
-        console.log(this.state.pokemon)
+        
 }
     render() 
     {

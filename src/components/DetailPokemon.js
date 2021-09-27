@@ -7,7 +7,7 @@ export default class DetailPokemon extends Component {
             <>
                 { this.props.isLoading
                 ? <img className='load-ing-det' src='../pokeball.png' alt='pokeball'/>
-                : <div className='pokemon-neem'>{this.props.details.pokemon}  
+                : <div className='pokemon'>{this.props.details.pokemon}  
                 <img className='poke-pic'src={this.props.details.url_image} alt={this.props.details.pokemon}/>  
                 <div className='pokemon-deets'>Type:{this.props.details.type_1}</div>
                  <div className='pokemon-deets'>Attack:{this.props.details.attack}</div>
