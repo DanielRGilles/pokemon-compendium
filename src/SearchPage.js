@@ -33,7 +33,7 @@ export default class SearchPage extends Component {
         this.setState({ sortOrder: e.target.value });    
     } 
     handleNextPageChange = async () => {
-     await this.setState((prevState) =>  ({page: prevState.page +1 }))
+       await this.setState((prevState) =>  ({page: prevState.page +1 }))
         console.log(this.state.page)
        await this.fetchData();
     } 
