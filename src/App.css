@@ -1,38 +1,275 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.header-class {
+  display: flex;
   text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background-color: red;
+  height: 80px;
+  justify-content: center;
+  border: ridge 2px black;
+  align-items: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.detailed {
+  justify-content: center;
+}
+.poke-cnt > form {
+  display: flex;
+  justify-self: center;
+  
+}
+* {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+body {
+  background-color: lavender;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-box {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.search-box > * {
+  padding-left: 25px;
+   width: fit-content;
+   height: fit-content;
+
+}
+.title-parent {
+ display: flex;
+  font-size: 1.5rem;
+ justify-content: center;
+ align-self: center;
+ padding: 5px;
+ 
+}
+.pokemon-neem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: large;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-self: start;
+}
+
+.nav-link {
+  font-size: 1rem;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+.poke-mon{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 95vw;
+  height: fit-content;
+  list-style: none;
+  grid-gap: 5px;
+  margin: 0;
+}
+.pokemon {
+  width: fit-content;
+  height: fit-content;
+  max-width: 80%;
+  border: ridge 1px black;
+  justify-self: center;
+  margin: 5px;
+  background-color: ivory;
+  align-items: center;
+  padding: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  
+}
+.detailed {
+  display: flex;
+  justify-content: center;
+}
+.position-pokemon {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+}
+.grass {
+  background-color: lightgreen;
+}
+.fire {
+  background-color: lightsalmon;
+}
+.water {
+  background-color: lightblue;
+}
+.bug {
+  background-color: rgb(247, 247, 37);
+}
+.normal {
+  background-color: lightgrey;
+}
+.steel {
+  background-color: slategray;
+}
+.psychic {
+  background-color: rgb(124, 83, 165);
+}
+.dragon {
+  background-color: rgba(19, 16, 16, 0.705);
+  color: coral;
+}
+.dark {
+  background-color: gold;
+}
+.ground {
+  background-color: brown;
+}
+.ice {
+  background-color: #D6ECEF
+}
+.fighting {
+  background-color: wheat;
+}
+.fairy {
+  background-color: pink;
+}
+.ghost {
+  background-color: lightslategray;
+}
+.flying {
+  background-color: coral;
+}
+.poison {
+  background-color: darkgreen;
+}
+.rock {
+  background-color: rgb(87, 87, 26);
+}
+.electric {
+  background-color: skyblue;
+  font-size: .8rem;
+
+}
+
+.home-img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.pokemon > img {
+  justify-content: center;
+}
+.pokemon-deets {
+  margin: 1px 5px 1px 5px;
+  background-color: white;
+  border: ridge 1px black;
+  padding: 5px;
+  font-weight: bold;
+  height: fit-content;
+  
+  
+}
+.poke-pic {
+  width: 50%;
+  height: 55%;
+  justify-self: center;
+  
+}
+.image-parent {
+  display: flex;
+  justify-content: center;
+}
+.poke-pic:hover { 
+  transform: scale(115%);
+}
+.load-ing {
+  position: fixed;
+  top: 50%;
+  margin-left: 40%;
+  border-radius: 50%;
+  animation: rotation 400ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.load-ing-det {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  animation: rotation 400ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@media only screen and (max-width: 999px) {
+  .poke-mon  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+  .pokemon {
+    max-width: 55%;
+    min-width: 25%;
+
+  }
+  .poke-mon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+  
+  .search-box {
+  width: fit-content;
+  font-size: 50%;
+  padding: 2px;
+  }
+  form > input {
+    width: 75%;
+  }
+  .pokemon-deets {
+    font-size: 65%;
+    overflow: hidden;
+  }
+  .pokemon-neem {
+    font-size: .75rem;
+    width: fit-content;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 500px) {
+.search-box  {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 90vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: fit-content;
+  font-size: 16px;
+  align-content: center;
+  border: solid 1px black;
+  justify-content: space-between;
+}
+.search-box > button {
+  justify-self: end;
+}
+.search-box > label {
+  padding: 0;
+  
+}
+.poke-mon {
+  display: flex;
+  justify-items: center;
+  align-self: center;
+}
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
